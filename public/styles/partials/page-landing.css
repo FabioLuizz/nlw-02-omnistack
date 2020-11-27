@@ -1,0 +1,154 @@
+#page-landing {
+    background: var(--color-primary); /* cor primaria da pagina (fundo) */
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary); /* Cor primaria do texto menos "Sua plataforma de estudo" */
+}
+
+.logo-container img {
+    height: 10rem ; /* Altura da imagem proffy */
+}
+
+.logo-container {
+    text-align: center; /* Alinha texto proffy ao centro da página */
+    margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+    font-weight: 500; /* Opacidade da fonte */
+    font-size: 3.6rem; /* Tamanho da fonde */
+    line-height: 4.6rem; /* Altura da linha do texto*/
+    margin-top: 0.8; /* Tamanho da margem de cima da fonte */
+}
+
+.hero-image { /* a logo no meio do site */
+    width: 100%; /* O tamanho da imagem, de acordo com o tamanho do bloco da 
+    pagina, a imagem é pra tomar 100% o tamanho do bloco da pagina */
+    
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+
+.buttons-container a { /* Configuração do botão */
+    width: 30rem;  /* Largura do botão */
+    height: 10.4rem; /* Altura do botão */
+    
+    border-radius: 0.8rem; /* Comando usado para arredeodar os botões */
+    margin-right: 1.6rem; /* Comando usado para dar um espaço entre os botões lado direito */
+
+    font:700 2.4rem archivo; /* 700 é a opacidade da fonte, 2.4 tamanho e archivo é o link citado la no cabeçalho */
+
+    display: flex; /* Comando para colocar um botão do lado do outro e ser compativel com qualquer amplitude de telas */
+    align-items: center; /* alinha itens ao centro */
+    justify-content: center; /* Deixa o documento não encostar na parede da pagina */
+    
+    text-decoration: none;/* elimina as linhas que ficam embaixo das palavras, mais especificamento palavras usadas em link */
+
+    transition: backgroud 0.2s;
+
+    color: var(--color-button-text); 
+}
+
+.buttons-container img {
+    width: 4rem; /* Tamanho do icone botão */
+    margin-right: 2.4rem;
+}
+
+.buttons-container a.study {
+    background: var(-color-primary-lighter);
+}
+ 
+/* Esse comando a.study:hover faz mudar a cor
+do botao ao passar o mouse por cima */
+
+.buttons-container a.study:hover {
+    background: var(--color-primary-light);
+}
+
+/*O comando margin-right: 0; fez eliminar os espaços
+que poderiam dar problema de espaçamento sem
+necessidade */
+
+.buttons-container a.give-classes {
+    background: var(--color-secondary);
+
+    margin-right: 0; /* para tirar um espaço indesejado ao lado direito */
+}
+
+.buttons-container a.give-classes:hover {
+    background: var(--color-secondary-dark);
+}
+
+.total-connections {
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        font-size: 40%;
+    }
+
+    .hero-image {
+        height: 45rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #page-landing #container {
+        max-width: 1100px;
+        display: grid; /* grid é a divisão da tela da pagina em linhas e quadrados (colunas) */
+        grid-template-columns: 2fr 1fr 2fr; /* grid-template-columns, são as colunas, e logo a frente, as frações é o tamanho das colunas */ 
+        grid-template-rows: 350px 1fr; /* grid-template-rows são as linhas, e as fraçôes são os tamanho das linhas ex : 1fr */
+        grid-template-areas: /* comando para criar posição estrategica para colocar as imagens da pagina */
+        "proffy image image"
+        "button button texting";
+       /* gap: 60px; da um espaçamento nas imagens da pagina */
+        column-gap: 87px;
+        row-gap: 86px;
+        
+    
+    } 
+        /* posições estrategicas */
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center; /* alinha uma img ao grid no centro */
+        margin: 0;
+    }
+
+    .logo-container img {
+        height: 127px;
+
+    }
+
+    .hero-image {
+        grid-area: image;
+        height: 350px;
+    }
+
+    .buttons-container {
+        grid-area: button;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .total-connections {
+        grid-area: texting;
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+
+}

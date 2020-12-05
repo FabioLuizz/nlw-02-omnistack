@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/FabioLuizz/nlw-02-omnistack/blob/main/.github/logo-do-proffy.svg">
- <img src="https://raw.githubusercontent.com/FabioLuizz/nlw-02-omnistack/e41f9683d3d2cac12d33bffd205689e178e15d33/.github/logo-do-proffy.svg"></a>
+ <img src="https://raw.githubusercontent.com/FabioLuizz/nlw-02-omnistack/82c85db5c7897a908e3d2389b349b4957ea734ee/.github/logo-do-proffy.svg"></a>
 </h1>
 
 <p align="center">
